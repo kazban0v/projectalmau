@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Информация о студенте</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .info-block {
+            margin-bottom: 20px;
+        }
+        .info-block:last-child {
+            margin-bottom: 0;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin-right: 10px; /* Добавлено для создания отступа между кнопками */
+        }
+        .btn:last-child {
+            margin-right: 0; /* Удаление отступа для последней кнопки */
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Информация о студенте {{ student.name }}</h1>
+        <div class="info-block">
+            <p>Год: {{ student.year }}</p>
+        </div>
+        <div class="info-block">
+            <p>Курс: {{ student.course }}</p>
+        </div>
+        <div class="info-block">
+            <p>Специальность: {{ student.specialization }}</p>
+        </div>
+        <a href="/students" class="btn">Назад</a> <!-- Изменена ссылка на страницу со списком студентов -->
+        <a href="/" class="btn">На главную</a>
+    </div>
+</body>
+</html>
